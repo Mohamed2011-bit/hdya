@@ -1,0 +1,66 @@
+<br>
+<div class="checkout_area section_padding_100">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-md-6">
+                <div class="checkout_details_area  clearfix" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+
+                    <div class="cart-page-heading mb-5">
+                        <h5>Billing Address</h5>
+                    </div>
+
+                    <form action="#" method="post">
+                        <div class="row">
+                            <div class="col-md-6 mb-2 pr-4">
+                                <label for="first_name">First Name <span>*</span></label>
+                                <input [(ngModel)]="myProfile.first_name" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="first_name" value="{{myProfile.first_name}}" required>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <label for="last_name">Last Name <span>*</span></label>
+                                <input [(ngModel)]="myProfile.last_name" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="last_name" value="{{myProfile.last_name}}" required>
+                            </div>
+
+                            <div class="col-12 mb-2">
+                                <label for="country">Country <span>*</span></label>
+                                <input type="text" class="form-control" [ngModelOptions]="{standalone: true}" id="country" value="Egypt" readonly>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <label for="street_address">Address <span>*</span></label>
+                                <input [(ngModel)]="myProfile.address" [ngModelOptions]="{standalone: true}" type="text" class="form-control mb-3" id="street_address" value="{{myProfile.address}}" required>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="phone_number">Phone No <span>*</span></label>
+                                <input [(ngModel)]="myProfile.mobile" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="phone_number" min="0" value="{{myProfile.mobile}}" required>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <label for="email_address">Email Address <span>*</span></label>
+                                <input type="email" class="form-control" id="email_address" value="{{myProfile.email}}" readonly>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-5 ml-lg-auto" style="background-color:#E3EBF9 ;">
+                <div class="order-details-confirmation" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+
+                    <div class="cart-page-heading">
+                        <h4>Your Order</h4><br>
+                        <p> Details</p>
+                    </div>
+
+                    <ul class="order-details-form mb-4">
+                        <li><span>Total Products</span> <span>{{checkout.totalOrders}}</span></li>
+                        <li><span>Shipping</span> <span>Free</span></li>
+                        <li><span>Total</span> <span>{{checkout.totalPrice | currency:'EGP ' }}</span></li>
+                    </ul>
+                    <img src="../../../assets/images/Order-Button-to-Top-Down-View-Delivery-Truck-on-Road-Animation.gif" (click)="orderNow()" style="height: 200px;width: 100%; cursor: pointer;" alt="">
+                    <a (click)="orderNow()" class="btn karl-checkout text-white">Place Order</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
